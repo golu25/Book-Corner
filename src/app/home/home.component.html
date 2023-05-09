@@ -1,0 +1,28 @@
+<app-search></app-search>
+<ul>
+    <li *ngFor="let book of books">
+        <a routerLink="/book/{{book.id}}">
+
+            <img src="{{book.imageUrl}}" alt="books">
+        </a>
+        <div class="content">
+            <div class="name">
+                {{book.name}}
+            </div>
+            <span class="favorite {{book.favorite?'':'not'}}">👍</span>
+            <div class="star">
+                <star-rating [value]="book.stars" [totalstars]="5" checkedcolor="red" uncheckedcolor="black" size="24px"
+                    [readonly]="true"></star-rating>
+            </div>
+            <div class="product-item-footer">
+                <div class="Author">
+                    <span *ngFor="let origin of book.Author">
+                        {{origin}}
+                    </span>
+                </div>
+                <div class="price">{{book.Price|currency:'INR'}}</div>
+            </div>
+        </div>
+    </li>
+
+</ul>

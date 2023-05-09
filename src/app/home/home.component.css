@@ -1,0 +1,59 @@
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    list-style-type: none;
+    padding: 0;
+}
+ul li a{
+    height:20rem;
+    width:20rem;
+
+    border: 1px solid whitesmoke;
+    border-radius: 1rem;
+    margin:1.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow:hidden;
+    color:#e72929;
+}
+li a:hover{
+    opacity: 0.7;
+    cursor:pointer;
+}
+.content{
+color:#e72929; 
+    display: flex;
+    margin:1.5rem;
+
+    flex-direction: column;
+    overflow    :hidden;
+    flex-wrap:wrap;
+    padding: 0.1rem 0.2rem;
+    position: relative;
+}
+.favorite{
+    position:absolute;
+    top: 0.5rem;
+    right:1.5rem;
+    font-size: 1.2rem;
+}
+.favorite.not{
+    color: black;
+}
+.star{
+    margin-bottom: 0.2rem;
+}
+.product-item-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Author{
+    color: grey;
+}
+.price{
+    color: grey;
+    margin-top: 0.2rem;
+}

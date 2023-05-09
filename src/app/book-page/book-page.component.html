@@ -1,0 +1,26 @@
+<div class="main-content">
+    <div  class="container">
+        <img [src]="book.imageUrl" [alt]="book.name" width="200px">
+    </div>
+        <div class="details">
+            <div class="header">
+                <span class="name">
+                    {{book.name}}
+                </span>
+                <span class="favorite {{book.favorite?'':'not'}}">👍</span>
+            </div>
+            <div class="star">
+                <star-rating [value]="book.stars" [totalstars]="5" checkedcolor="red" uncheckedcolor="black" size="24px" [readonly]="true"></star-rating>
+                </div>
+                <div class="product-item-footer">
+                <div class="Author">
+                    <span *ngFor="let origin of book.Author">
+                        {{origin}}
+                    </span>
+                </div>
+    
+                <div class="price">{{book.Price|currency:'INR'}}</div>
+                </div>
+        </div>
+        <button (click)="addToCart()">Add to Cart</button>
+    </div>
